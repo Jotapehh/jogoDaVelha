@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        header{
+            text-align: left;
+            margin: 2em 2em 2em 0.5em;
+        }
+
+        main{
+            margin: auto;
+        }
+
+        footer{
+            text-align: right;
+            margin-right: 2em;
+        }
+        a{
+            color: #00ff00;
+        }
+        a:hover{
+            color: whitesmoke;
+        }
+        a:visited{
+            color: red;
+        }
+
+        article{
+            display: table-cell;
+
+            border-style: solid;
+            border-width: 0.1em;
+
+            width: 10em;
+            height: 10em;
+
+            text-align: start;
+        }
+        article:hover{
+            background-color: #ffffff10;
+            border-color: blue;
+        }
+        article>p{
+            margin-top: 0em;
+        }
+
+        p#player{
+            text-align: center;
+            font-size: 2em;
+            color: blue;
+
+            margin-top: 1.8em;
+        }
+        p#playerPlacar{
+            background-color: #070164;
+            padding: 0.5em;
+            width: 5.5em;
+            border-radius: 0.5em;
+        }
+        p#enemy{
+            text-align: center;
+            font-size: 2em;
+            color: red;
+
+            margin-top: 1.8em;
+        }
+        p#enemyPlacar{
+            background-color: #790707;
+            padding: 0.5em;
+            width: 5.5em;
+            border-radius: 0.5em;
+        }
+
+        span#reload{
+            text-align: center;
+            font-size: 1.3em;
+
+            width: 8em;
+            height: 5em;
+
+            display: inline;
+            position: absolute;
+            top: 15em;
+            right: 5em;
+            left: 5em;
+
+            background-color: white;
+            color: black;
+            padding: 1em;
+
+            border-radius: 2em;
+
+            
+        }
+        span#reload{
+            visibility: hidden;
+        }
+        span>button{
+            width: 6em;
+            height: 2em;
+
+            background-color: #070164;
+            color: white;
+            font-size: 0.9em;
+            border-radius: 15px;
+            border-style: none;
+        }
+        span>button:hover{
+            background-color: #4237d8;
+        }
+        span>button:active{
+            background-color: #eb0b0b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jogo da Velha</h1>
+        <nav>
+            <p id="playerPlacar">jogador: <span id="ptPlayer">0</span></p>
+            <p id="enemyPlacar">Máquina: <span id="ptEnemy">0</span></p>
+        </nav>
+    </header>
+    <main id="principal">
+        <section>
+            <article id="box1">
+                
+            </article>
+            <article id="box2">
+                
+            </article>
+            <article id="box3">
+                
+            </article>
+        </section>
+        <section>
+            <article id="box4">
+                
+            </article>
+            <article id="box5">
+                
+            </article>
+            <article id="box6">
+                
+            </article>
+        </section>
+        <section>
+            <article id="box7">
+                
+            </article>
+            <article id="box8">
+                
+            </article>
+            <article id="box9">
+                
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/Jotapehh">Jotapehh</a></p>
+    </footer>
+    <span id="reload">
+        <p id="msg">Partida finalizada!</p>
+        <button onclick="sairOk()">Ok</button>
+    </span>
+    <script src="code/logic.js"></script>
+</body>
+</html>
